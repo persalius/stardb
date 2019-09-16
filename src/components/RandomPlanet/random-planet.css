@@ -1,46 +1,55 @@
 .random-planet {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1rem;
-    min-height: 182px;
-    align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 1rem;
+  min-height: 182px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.random-planet .planet-image {
+  width: 150px;
+  max-width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.random-planet .list-group {
+  margin: 1rem 0 0 1rem;
+}
+
+.random-planet .list-group-item {
+  padding: .25rem;
+}
+
+.random-planet .list-group-item .term {
+  margin-right: .5rem;
+}
+
+@media screen and (max-width: 580px) {
+  .random-planet {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
   }
-  
-  .random-planet .planet-image {
-    width: 150px;
-    max-width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    margin-right: 1rem;
+
+  .random-planet>* {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+
+  .planet-image {
+    margin-bottom: 1em;
   }
   
   .random-planet .list-group {
-    margin: 1rem 0 0 1rem;
+    margin-left: 0;
   }
-  
-  .random-planet .list-group-item {
-    padding: .25rem;
-  }
-  
-  .random-planet .list-group-item .term {
-    margin-right: .5rem;
-  }
-
-  @media screen and (max-width: 580px) {
-    .random-planet {
-      justify-content: center;
-      text-align: center;
-    }
-
-    .random-planet>* {
-      flex: 1;
-    }
-
-    .planet-image {
-      margin-bottom: 1em;
-    }
-    
-    .random-planet .list-group {
-      margin-left: 0;
-    }
-  }
+}

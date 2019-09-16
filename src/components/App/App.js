@@ -14,7 +14,7 @@ import {
 } from "../pages";
 import { StarshipDetails } from '../sw-components';
 
-import {BrowserRouter as Router, Route, Switch, Redirect} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 import './app.css';
 
@@ -55,7 +55,6 @@ class App extends Component {
                                     }} />
                                 <Route path="/login" render={() => <LoginPage isLoggedIn={isLoggedIn} onLogin={this.onLogin} />} />
                                 <Route path="/secret" render={() => <SecretPage isLoggedIn={isLoggedIn} />} />
-                                {/* <Redirect to="/" /> */}
                                 <Route render={() => <h2 className="text-center">Page not found</h2>} />
                             </Switch>
                         </div>
