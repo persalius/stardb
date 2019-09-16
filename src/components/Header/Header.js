@@ -8,7 +8,7 @@ const Header = () => {
       <h3>
         <Link to="/">StarDB</Link>
       </h3>
-      <ul className="d-flex">
+      <ul className="header__nav d-flex">
         <li>
           <Link to="/people/">People</Link>
         </li>

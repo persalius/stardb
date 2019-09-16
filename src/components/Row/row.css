@@ -1,0 +1,21 @@
+.row {
+    margin: 0;
+}
+
+.row .col-md-6:first-child {
+    padding-left: 0;
+}
+
+.row .col-md-6:last-child {
+    padding-right: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .row .col-md-6:first-child {
+        padding-right: 0;
+    }
+    
+    .row .col-md-6:last-child {
+        padding-left: 0;
+    }
+}

@@ -1,5 +1,6 @@
 .random-planet {
     display: flex;
+    flex-wrap: wrap;
     padding: 1rem;
     min-height: 182px;
     align-items: center;
@@ -7,6 +8,7 @@
   
   .random-planet .planet-image {
     width: 150px;
+    max-width: 150px;
     height: 150px;
     border-radius: 10px;
     margin-right: 1rem;
@@ -22,4 +24,23 @@
   
   .random-planet .list-group-item .term {
     margin-right: .5rem;
+  }
+
+  @media screen and (max-width: 580px) {
+    .random-planet {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .random-planet>* {
+      flex: 1;
+    }
+
+    .planet-image {
+      margin-bottom: 1em;
+    }
+    
+    .random-planet .list-group {
+      margin-left: 0;
+    }
   }
